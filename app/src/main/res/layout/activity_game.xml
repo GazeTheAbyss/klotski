@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/chibi"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_view">
+
+        <ImageButton
+            android:id="@+id/button_huang_zhong"
+            android:src="@drawable/huangzhong"
+            android:layout_width="95dp"
+            android:layout_height="200dp"
+            android:layout_margin="0dp"
+            android:background="#4CAF50" />
+
+        <ImageButton
+            android:id="@+id/button_zhang_fei"
+            android:src="@drawable/zhangfei"
+            android:layout_width="95dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/button_huang_zhong"
+            android:background="#F44336" />
+
+        <ImageButton
+            android:id="@+id/button_cao_cao"
+            android:src="@drawable/caocao"
+            android:layout_width="190dp"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@id/button_huang_zhong"
+            android:background="#CDDC39" />
+
+        <ImageButton
+            android:id="@+id/button_zhao_yun"
+            android:src="@drawable/zhaoyun"
+            android:layout_width="95dp"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@id/button_cao_cao"
+            android:background="#3F51B5" />
+
+        <ImageButton
+            android:id="@+id/button_ma_chao"
+            android:src="@drawable/machao"
+            android:layout_width="95dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/button_zhao_yun"
+            android:layout_toRightOf="@id/button_guan_yu"
+            android:background="#FF9800" />
+
+        <ImageButton
+            android:id="@+id/button_guan_yu"
+            android:src="@drawable/guanyu"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button_cao_cao"
+            android:layout_toRightOf="@id/button_zhang_fei"
+            android:background="#00BCD4" />
+
+        <ImageButton
+            android:id="@+id/button_soldier_one"
+            android:src="@drawable/zu"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button_guan_yu"
+            android:layout_toRightOf="@id/button_zhang_fei"
+            android:background="#9C27B0" />
+
+        <ImageButton
+            android:id="@+id/button_soldier_two"
+            android:src="@drawable/zu"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button_soldier_one"
+            android:layout_toRightOf="@id/button_zhang_fei"
+            android:background="#FFEB3B" />
+
+        <ImageButton
+            android:id="@+id/button_soldier_three"
+            android:src="@drawable/zu"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button_guan_yu"
+            android:layout_toLeftOf="@id/button_ma_chao"
+            android:background="#9F061D" />
+
+        <ImageButton
+            android:id="@+id/button_soldier_four"
+            android:src="@drawable/zu"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/button_soldier_three"
+            android:layout_toLeftOf="@id/button_ma_chao"
+            android:background="#055A0A" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/time"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/step_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/step"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/time_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="1"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/time_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/steper_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="1"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/step_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
